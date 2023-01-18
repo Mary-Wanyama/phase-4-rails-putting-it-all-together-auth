@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
 
     def index
         if session[:user_id]
-            render json: Recipe.all, status: :created
+            render json: Recipe.all
         else
             render json: { errors: [] }, status: :unauthorized
         end

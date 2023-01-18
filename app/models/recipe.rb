@@ -1,7 +1,10 @@
 class Recipe < ApplicationRecord
-    belongs_to :user 
+    # belongs_to :user 
 
     validates :title, presence: true 
-    validates :instructions, presence: true 
-    validates :instructions, length: { minimum: 50 }
+    validates :instructions, presence: true, length: { minimum: 50 }
+    
+    belongs_to :user
+
+    # validates :minutes_to_complete, presence: true
 end
